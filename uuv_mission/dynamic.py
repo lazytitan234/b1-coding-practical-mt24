@@ -98,6 +98,7 @@ class ClosedLoop:
         
         positions = np.zeros((T, 2))
         actions = np.zeros(T)
+        self.controller.reset()
         self.plant.reset_state()
 
         for t in range(T):
